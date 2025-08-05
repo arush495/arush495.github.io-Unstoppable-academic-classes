@@ -816,7 +816,78 @@
 
 </body>
 </html>
+    <body>
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
 
+  <div class="faq-item">
+    <h3 onclick="toggleFAQ(this)">What is this website about?</h3>
+    <p>This website provides Class 12 Physics and Chemistry notes in PDF format for students.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 onclick="toggleFAQ(this)">How can I view or download notes?</h3>
+    <p>You can type the chapter name and click 'View PDF', then you can view or download the notes easily.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 onclick="toggleFAQ(this)">Are these notes free to use?</h3>
+    <p>Yes, these notes are completely free to access and use for everyone.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 onclick="toggleFAQ(this)">Can I open this website on mobile?</h3>
+    <p>Yes, this website is mobile-friendly and works on any device with an internet connection.</p>
+  </div>
+</section>
+
+<style>
+  #faq {
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+  #faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+  }
+  .faq-item {
+    margin-bottom: 10px;
+  }
+  .faq-item h3 {
+    cursor: pointer;
+    margin: 0;
+    background: #ddd;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  .faq-item h3:hover {
+    background: #ccc;
+  }
+  .faq-item p {
+    display: none;
+    padding: 10px;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+  }
+</style>
+
+<script>
+  function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+  }
+</script>
+</body>
 
 
 
@@ -896,79 +967,7 @@
         }
       }
     </script> 
-    <body>
     
-    <section id="faq">
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">What is this website about?</h3>
-    <p>This website provides Class 12 Physics and Chemistry notes in PDF format for students.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">How can I view or download notes?</h3>
-    <p>You can type the chapter name and click 'View PDF', then you can view or download the notes easily.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">Are these notes free to use?</h3>
-    <p>Yes, these notes are completely free to access and use for everyone.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3 onclick="toggleFAQ(this)">Can I open this website on mobile?</h3>
-    <p>Yes, this website is mobile-friendly and works on any device with an internet connection.</p>
-  </div>
-</section>
-
-<style>
-  #faq {
-    padding: 30px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-  }
-  #faq h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333;
-  }
-  .faq-item {
-    margin-bottom: 10px;
-  }
-  .faq-item h3 {
-    cursor: pointer;
-    margin: 0;
-    background: #ddd;
-    padding: 12px;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  .faq-item h3:hover {
-    background: #ccc;
-  }
-  .faq-item p {
-    display: none;
-    padding: 10px;
-    margin: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 0 0 5px 5px;
-  }
-</style>
-
-<script>
-  function toggleFAQ(element) {
-    const answer = element.nextElementSibling;
-    if (answer.style.display === "block") {
-      answer.style.display = "none";
-    } else {
-      answer.style.display = "block";
-    }
-  }
-</script>
-</body>
 </body>
 </html> 
 
