@@ -514,6 +514,26 @@
         .footer-contact a {
             margin-right: 10px;
             color: var(--accent);
+            <style>
+  /* Footer contact links ke liye */
+  .contact-info a {
+    color: #fff !important;       /* force white color */
+    text-decoration: none !important;
+  }
+
+  .contact-info a:hover {
+    color: #f5c518 !important;    /* hover pe golden color */
+  }
+
+  /* iOS aur Android ke auto-detect ko override karne ke liye */
+  a[href^="tel"], 
+  a[href^="mailto"], 
+  a[href^="http"] {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+</style>
+
         }
 
         .footer-bottom {
@@ -979,6 +999,7 @@
     
 </body>
 </html> 
+
 
 
 
