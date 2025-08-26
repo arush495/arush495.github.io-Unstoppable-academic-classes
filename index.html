@@ -710,32 +710,9 @@
               placeholder="Enter chapter name"
               style="padding: 10px; font-size: 1.1rem; width: 200px; margin-right: 10px;"
             />
- {
-  background-color: #ffdb58;
-  color: black;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  -webkit-tap-highlight-color: transparent; 
-}
-
-button:hover {
-  background-color: #e6c300;  
-}
-
-button:active {
-  background-color: #c9aa00;  
-  transform: scale(0.97);     
-  color: black;        
-}
-
-button:focus {
-  outline: none;
-} 
+<button onclick="loadPDF()">
+  Open PDF
+</button>
     
 
 
@@ -990,25 +967,25 @@ button:focus {
       // Add your chapter names and their corresponding Google Drive preview URLs here
       const chapterPDFs = {
         "electric charges and field":
-          "https://drive.google.com/file/d/1-RucDdlvf-zONBSf1YdykS8td6I425-G/view?usp=sharing",
+          "https://drive.google.com/file/d/1-RucDdlvf-zONBSf1YdykS8td6I425-G/preview",
         "organic chemistry":
-          "https://drive.google.com/file/d/1SGad9cNq7kAwOUENc6isM1MM5CYaexaq/view?usp=sharing",
+          "https://drive.google.com/file/d/1SGad9cNq7kAwOUENc6isM1MM5CYaexaq/preview",
         "current electricity":
-          "https://drive.google.com/file/d/1Bd6B1PwMKwKw54Q2mpWxwhEDf_O27UEJ/view?usp=drive_link",
+          "https://drive.google.com/file/d/1Bd6B1PwMKwKw54Q2mpWxwhEDf_O27UEJ/preview",
         "electrostatic potential and capacitance":
-          "https://drive.google.com/file/d/1lQvzy2b4O5mxiQmZk2vI25dh8Q2OAn_B/view?usp=drive_link"
+          "https://drive.google.com/file/d/1lQvzy2b4O5mxiQmZk2vI25dh8Q2OAn_B/preview"
         "magnetic effect of current":
-          "https://drive.google.com/file/d/1rRn8ZX6F9c7XAafF7stCB3_8_899q2g6/view?usp=drive_link",
+          "https://drive.google.com/file/d/1rRn8ZX6F9c7XAafF7stCB3_8_899q2g6/preview",
         "electromagneitc induction":
-          "https://drive.google.com/file/d/1GkdHlGRpaiCTNyftDjGh_pqc0GGSKgky/view?usp=drive_link",
+          "https://drive.google.com/file/d/1GkdHlGRpaiCTNyftDjGh_pqc0GGSKgky/preview",
         "electromagnetic waves":
-          "https://drive.google.com/file/d/1FpQmAFTXUMWU1kYGv-ZyTDTRGqPeYZ5w/view?usp=drive_link",
+          "https://drive.google.com/file/d/1FpQmAFTXUMWU1kYGv-ZyTDTRGqPeYZ5w/preview",
         "ray optics":
-          "https://drive.google.com/file/d/1vm4uV8wi10_jT1aw4Qr9js8nKD7mGKh0/view?usp=drive_link",
+          "https://drive.google.com/file/d/1vm4uV8wi10_jT1aw4Qr9js8nKD7mGKh0/preview",
         "wave optics":
           "https://drive.google.com/file/d/12_sN3wOUNrPHQ-xlVRWzLxpqEj4aFaOg/preview",
         "semiconductor devices and digital circuit":
-          "https://drive.google.com/file/d/1hnRYoD9qF9el0KQXCwyMcwuy72O3mmQcc/view?usp=drive_link"
+          "https://drive.google.com/file/d/1hnRYoD9qF9el0KQXCwyMcwuy72O3mmQcc/preview"
         // Add more chapters here
       };
 
