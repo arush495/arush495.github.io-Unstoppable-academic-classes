@@ -699,22 +699,95 @@
     <!-- Physics Notes Section -->
     <section class="section notes-section" id="notes">
         <div class="container notes-container">
-            <h1>Class 12th Physics and Chemistry Notes</h1>
-            <p> Note: Type in small letters !</p>
-            
+<head>
+  <meta charset="UTF-8">
+  <title>Notes Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f2f5;
+      padding: 30px;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      border: none;
+      background: #2980b9;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3498db;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Find Your Chapter Notes</h1>
+  
+  <input type="text" id="chapterInput" placeholder="Enter Chapter Name">
+  <button onclick="openPDF()">Find Notes</button>
+
+  <p id="message"></p>
+
+  <script>
+    function openPDF() {
+      let input = document.getElementById("chapterInput").value.trim().toLowerCase();
+      let message = document.getElementById("message");
+
+      // Chapter list (example)
+      let chapters = {
+           "electric charges and field":
+          "https://drive.google.com/file/d/1-RucDdlvf-zONBSf1YdykS8td6I425-G/preview",
+        "organic chemistry":
+          "https://drive.google.com/file/d/1SGad9cNq7kAwOUENc6isM1MM5CYaexaq/preview",
+        "current electricity":
+          "https://drive.google.com/file/d/1Bd6B1PwMKwKw54Q2mpWxwhEDf_O27UEJ/preview",
+        "electrostatic potential and capacitance":
+          "https://drive.google.com/file/d/1lQvzy2b4O5mxiQmZk2vI25dh8Q2OAn_B/preview"
+        "magnetic effect of current":
+          "https://drive.google.com/file/d/1rRn8ZX6F9c7XAafF7stCB3_8_899q2g6/preview",
+        "electromagneitc induction":
+          "https://drive.google.com/file/d/1GkdHlGRpaiCTNyftDjGh_pqc0GGSKgky/preview",
+        "electromagnetic waves":
+          "https://drive.google.com/file/d/1FpQmAFTXUMWU1kYGv-ZyTDTRGqPeYZ5w/preview",
+        "ray optics":
+          "https://drive.google.com/file/d/1vm4uV8wi10_jT1aw4Qr9js8nKD7mGKh0/preview",
+        "wave optics":
+          "https://drive.google.com/file/d/12_sN3wOUNrPHQ-xlVRWzLxpqEj4aFaOg/preview",
+        "semiconductor devices and digital circuit":
+          "https://drive.google.com/file/d/1hnRYoD9qF9el0KQXCwyMcwuy72O3mmQcc/preview",
+        // Add more chapters here
+      };
+        
+
+      if (input in chapters) {
+        message.innerHTML = "";
+        window.open(chapters[input], "_blank"); // Open PDF in new tab
+      } else {
+        message.innerHTML = "❌ Sorry, this chapter PDF is not available.";
+      }
+    }
+  </script>
+
+</body>
+
             
 
-            <input
-              type="text"
-              id="chapterInput"
-              placeholder="Enter chapter name"
-              style="padding: 10px; font-size: 1.1rem; width: 200px; margin-right: 10px;"
-            /> 
-            
- <button onclick="loadPDF()" class="btn btn-add" style="padding: 12px 24px;">
-              View PDF
-            </button>
-
+           
 
             <iframe
               id="pdfViewer"
@@ -962,49 +1035,7 @@
  <p> UAC Coaching. All rights reserved.</p>
     </footer>
 
-    <!-- Script for dynamic PDF loading -->
-    <script>
-      // Add your chapter names and their corresponding Google Drive preview URLs here
-      const chapterPDFs = {
-        "electric charges and field":
-          "https://drive.google.com/file/d/1-RucDdlvf-zONBSf1YdykS8td6I425-G/preview",
-        "organic chemistry":
-          "https://drive.google.com/file/d/1SGad9cNq7kAwOUENc6isM1MM5CYaexaq/preview",
-        "current electricity":
-          "https://drive.google.com/file/d/1Bd6B1PwMKwKw54Q2mpWxwhEDf_O27UEJ/preview",
-        "electrostatic potential and capacitance":
-          "https://drive.google.com/file/d/1lQvzy2b4O5mxiQmZk2vI25dh8Q2OAn_B/preview"
-        "magnetic effect of current":
-          "https://drive.google.com/file/d/1rRn8ZX6F9c7XAafF7stCB3_8_899q2g6/preview",
-        "electromagneitc induction":
-          "https://drive.google.com/file/d/1GkdHlGRpaiCTNyftDjGh_pqc0GGSKgky/preview",
-        "electromagnetic waves":
-          "https://drive.google.com/file/d/1FpQmAFTXUMWU1kYGv-ZyTDTRGqPeYZ5w/preview",
-        "ray optics":
-          "https://drive.google.com/file/d/1vm4uV8wi10_jT1aw4Qr9js8nKD7mGKh0/preview",
-        "wave optics":
-          "https://drive.google.com/file/d/12_sN3wOUNrPHQ-xlVRWzLxpqEj4aFaOg/preview",
-        "semiconductor devices and digital circuit":
-          "https://drive.google.com/file/d/1hnRYoD9qF9el0KQXCwyMcwuy72O3mmQcc/preview",
-        // Add more chapters here
-      };
-
-      function loadPDF() {
-        const input = document
-          .getElementById("chapterInput")
-          .value.trim()
-          .toLowerCase();
-          
-        const iframe = document.getElementById("pdfViewer");
-
-        if (input in chapterPDFs) {
-          iframe.src = chapterPDFs[input];
-        } else {
-          alert("Sorry, PDF for this chapter is not available.");
-          iframe.src = "";
-        }
-      }
-    </script> 
+     
     <head>
     <title>Best Coaching Near Me - Unstoppable Academic Classes</title>
 <meta name="description" content="Looking for the best coaching near you? Unstoppable Academic Classes in Raebareli provides quality teaching for Physics, Maths, and Chemistry for 9th to 12th.">
@@ -1014,6 +1045,7 @@
     
 </body>
 </html> 
+
 
 
 
